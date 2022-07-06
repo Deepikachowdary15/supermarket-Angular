@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.img{
+    background-image: url('https://assets.aboutamazon.com/a5/60/398c51db4a4c9f5cb25e2b27c0ea/jwos.png');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+    

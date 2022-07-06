@@ -1,0 +1,35 @@
+<app-navabar></app-navabar>
+<nav
+  
+  style="background-color: #e3f2fd"
+>
+<table class="table">
+    <thead>
+      <tr>
+       <hr> <th scope="col">S. No.</th>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost Price</th>
+        <th scope="col">Sale Price</th>
+        <th scope="col">Profit</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data; let i= index">
+           <hr> <td>{{i+1}}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.costPrice }}</td>
+            <td>{{ item.salePrice }}</td>
+            <td>{{ item.salePrice-item.costPrice }}</td>
+            <td><button class="btn btn-success" routerLink="/addItems/{{item.id}}">Update</button></td>
+            <td><button class="btn btn-danger" (click)="delete(item.id)">Delete</button></td><hr>
+        </tr>
+    </tbody>
+  </table>
+
+<div class="roe">
+    <button class="btn btn-success" routerLink="/addItems">Add Item</button>
+</div>
